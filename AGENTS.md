@@ -10,6 +10,7 @@
 - `pnpm test:watch` — run Vitest in watch mode
 - Focused test: `pnpm exec vitest run <test-file-or-pattern>`
 - Vitest uses `jsdom`, global test APIs, and `src/setupTests.ts`; that setup mocks Web Audio and Notification APIs.
+- Test descriptions must follow the structure `should ..., when ...`, for example: `should restore activeTaskId from storage when task exists and is not completed`.
 - Timer tests use fake timers (`vi.useFakeTimers()`); test timer changes with `act` and `vi.advanceTimersByTime(...)`.
 - `tsconfig.json` enables strict TypeScript, `noUnusedLocals`, `noUnusedParameters`, and `noEmit`; `pnpm build` performs the typecheck.
 - There is no lint script or formatter/config in the repository; do not invent a lint command.
